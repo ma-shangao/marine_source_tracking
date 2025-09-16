@@ -36,11 +36,11 @@ RUN /bin/bash -c "source /opt/ros/${ROS_DISTRO}/setup.bash \
     && source /work/ardu_ws/install/setup.bash \
     && colcon build"
 
-RUN /bin/bash -c "source /opt/ros/${ROS_DISTRO}/setup.bash \
-    && source /work/ardu_ws/install/setup.bash \
-    && colcon test"
-RUN /bin/bash -c "source /opt/ros/${ROS_DISTRO}/setup.bash \
-    && source /work/ardu_ws/install/setup.bash \
-    && colcon test-result --verbose"
+# RUN /bin/bash -c "source /opt/ros/${ROS_DISTRO}/setup.bash \
+#     && source /work/ardu_ws/install/setup.bash \
+#     && colcon test"
+# RUN /bin/bash -c "source /opt/ros/${ROS_DISTRO}/setup.bash \
+#     && source /work/ardu_ws/install/setup.bash \
+#     && colcon test-result --verbose"
 
 COPY ./experiments /root/

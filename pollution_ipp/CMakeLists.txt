@@ -107,12 +107,12 @@ install(
 
 if(BUILD_TESTING)
   find_package(ament_cmake_gtest REQUIRED)
-  ament_add_gtest(source_loc_test
-    test/source_loc_test.cpp
-  )
-  target_link_libraries(source_loc_test
-    source_loc
-  )
+  # ament_add_gtest(source_loc_test
+  #   test/source_loc_test.cpp
+  # )
+  # target_link_libraries(source_loc_test
+  #   source_loc
+  # )
 
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights

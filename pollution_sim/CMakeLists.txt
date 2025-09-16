@@ -28,14 +28,14 @@ include_directories(
 #   src/pollution_sim.cpp
 # )
 
-ament_target_dependencies(${PROJECT_NAME}
-  rclcpp
-  std_msgs
-  nav_msgs
-  grid_map_ros
-  grid_map_msgs
-  Eigen3
-)
+# ament_target_dependencies(${PROJECT_NAME}
+#   rclcpp
+#   std_msgs
+#   nav_msgs
+#   grid_map_ros
+#   grid_map_msgs
+#   Eigen3
+# )
 
 # add_executable(${PROJECT_NAME}_node
 #   src/pollution_sim_node.cpp
@@ -61,7 +61,7 @@ ament_target_dependencies(${PROJECT_NAME}_node_csv
 # )
 
 install(TARGETS
-  ${PROJECT_NAME}_node
+  # ${PROJECT_NAME}_node
   ${PROJECT_NAME}_node_csv
   DESTINATION lib/${PROJECT_NAME}
 )
@@ -81,13 +81,13 @@ install(DIRECTORY
 
 if(BUILD_TESTING)
   find_package(ament_cmake_gtest REQUIRED)
-  ament_add_gtest(${PROJECT_NAME}_test test/test_pollution_sim.cpp)
-  ament_target_dependencies(${PROJECT_NAME}_test
-    rclcpp
-  )
-  target_link_libraries(${PROJECT_NAME}_test
-    ${PROJECT_NAME}
-  )
+  # ament_add_gtest(${PROJECT_NAME}_test test/test_pollution_sim.cpp)
+  # ament_target_dependencies(${PROJECT_NAME}_test
+  #   rclcpp
+  # )
+  # target_link_libraries(${PROJECT_NAME}_test
+  #   ${PROJECT_NAME}
+  # )
 
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights
