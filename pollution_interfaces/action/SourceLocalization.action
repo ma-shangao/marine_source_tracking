@@ -1,0 +1,17 @@
+# SourceLocalization.action
+# Goal: Request to start source localization
+float64 confidence_threshold
+---
+# Result: Final source location estimate
+geometry_msgs/Point estimated_source_location
+float64 confidence_level
+bool success
+string message
+---
+# Feedback: Periodic updates during localization
+geometry_msgs/Point current_best_estimate
+float64 current_confidence
+float64 x_lower_bound
+float64 x_upper_bound
+float64 y_lower_bound
+float64 y_upper_bound

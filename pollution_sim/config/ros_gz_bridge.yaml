@@ -1,0 +1,21 @@
+# Copyright 2025 author
+- ros_topic_name: "blueboat/odometry"
+  gz_topic_name: "/model/blueboat/odometry_with_covariance"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  gz_type_name: "gz.msgs.OdometryWithCovariance"
+  subscriber_queue: 5       # Default 10
+  publisher_queue: 5        # Default 10
+  lazy: false                # Default "false"
+  direction: GZ_TO_ROS      # Default "BIDIRECTIONAL" - Bridge both directions
+                              # "GZ_TO_ROS" - Bridge Gz topic to ROS
+                              # "ROS_TO_GZ" - Bridge ROS topic to Gz
+- ros_topic_name: "/clock"
+  gz_topic_name: "/clock"
+  ros_type_name: "rosgraph_msgs/msg/Clock"
+  gz_type_name: "gz.msgs.Clock"
+  subscriber_queue: 5       
+  publisher_queue: 5        
+  lazy: false                # Default "false"
+  direction: BIDIRECTIONAL    # Default "BIDIRECTIONAL" - Bridge both directions
+                              # "GZ_TO_ROS" - Bridge Gz topic to ROS
+                              # "ROS_TO_GZ" - Bridge ROS topic to Gz

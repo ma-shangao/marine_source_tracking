@@ -1,0 +1,10 @@
+source_loc_node:
+  ros__parameters:
+    use_sim_time: true
+    move_base_mode: ardupilot
+    odom_frame_id: ground_truth
+    rviz_waypoint: true
+    ci_gamma: 0.99
+    surface_flow_direction: 2.356194490192345
+    start_position_x: -120.0
+    start_position_y: 120.0
