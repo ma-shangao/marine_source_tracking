@@ -26,15 +26,20 @@ Tools/autotest/sim_vehicle.py -v Rover -f rover-skid --model JSON  --console --m
 
 Start the micro-ROS agent:
 ```bash
+source /work/ardu_ws/install/setup.bash
 ros2 run micro_ros_agent micro_ros_agent udp4 -p 2019
 ```
 
 Launch the pollution simulation:
 ```bash
+source /work/ardu_ws/install/setup.bash
+source /work/ros_ws/install/setup.bash
 ros2 launch pollution_sim sim_odom_tf.launch.py scenario:=$SCENARIO_NAME
 ```
 
 Launch the tracking server and client:
 ```bash
+source /work/ardu_ws/install/setup.bash
+source /work/ros_ws/install/setup.bash
 ros2 launch pollution_ipp source_loc.launch.py start_client:=true scenario:=$SCENARIO_NAME st:=$START_POSITION_NAME
 ```
