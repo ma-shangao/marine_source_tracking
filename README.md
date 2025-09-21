@@ -9,7 +9,7 @@
 Build the provided dockerfile, run the container based on the built image and allow it to access the network of the host machine.
 
 On the host machine:
-Start the simulation environment, sdf files can be found in experimnents folder:
+Start the simulation environment, sdf files can be found in experiments folder:
 ```bash
 gz sim -v4 test_world.sdf
 ```
