@@ -3,8 +3,9 @@ FROM ros:jazzy
 
 RUN apt-get update \
  && apt-get upgrade -y \
- && apt-get install -y python3-pip\
- && apt-get install -y git-all 
+ && apt-get install -y python3-pip \
+ && apt-get install -y git-all \
+ && apt-get install -y openjdk-17-jre
 
 # Dependencies for libigl
 RUN apt-get update \
@@ -18,8 +19,7 @@ RUN apt-get update \
  && apt-get install -y libxmu-dev \
  && apt-get install -y libblas-dev \
  && apt-get install -y libxinerama-dev \
- && apt-get install -y libxcursor-dev \
- && apt-get install -y openjdk-17-jre
+ && apt-get install -y libxcursor-dev
 
 WORKDIR /work/ros_ws/src
 COPY ./ marine_source_tracking/
