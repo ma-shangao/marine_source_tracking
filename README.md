@@ -43,3 +43,10 @@ source /work/ardu_ws/install/setup.bash
 source /work/ros_ws/install/setup.bash
 ros2 launch pollution_ipp source_loc.launch.py start_client:=true scenario:=$SCENARIO_NAME st:=$START_POSITION_NAME
 ```
+
+## Credits
+This repository used code from:
+- [odom_to_tf_ros2](https://github.com/gstavrinos/odom_to_tf_ros2)
+- [rapidcsv](https://github.com/d99kris/rapidcsv)
+
+The local estimation kernal and propagation was based on the implementation of [GasSourceLocalization](https://github.com/MAPIRlab/GasSourceLocalization).
